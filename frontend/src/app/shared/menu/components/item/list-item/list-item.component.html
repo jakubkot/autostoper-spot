@@ -1,0 +1,27 @@
+<ng-container *ngIf="!item.items; else nestedItems">
+  <a mat-list-item [routerLink]="item.routerLink" class="menu-item">
+    <div matListItemTitle class="menu-item">
+      <mat-icon class="menu-item-icon" *ngIf="item.icon">{{
+        item.icon
+      }}</mat-icon>
+      <span>{{ item.label }}</span>
+    </div>
+  </a>
+</ng-container>
+
+<ng-template #nestedItems>
+  <mat-list-item [matMenuTriggerFor]="childMenu">
+    <div matListItemTitle class="menu-item">
+      <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
+      <span>{{ item.label }}</span>
+      <mat-icon>expand_more</mat-icon>
+    </div>
+  </mat-list-item>
+
+  <mat-menu #childMenu="matMenu" [overlapTrigger]="false">
+    <app-menu-item
+      *ngFor="let item of item.items"
+      [item]="item"></app-menu-item>
+  </mat-menu>
+  <!--  <app-child-menu #menu [items]="item.items!"></app-child-menu>-->
+</ng-template>

@@ -1,0 +1,20 @@
+<ng-container *ngIf="spotViewModel$ | async as spotViewModel">
+  <h1 mat-dialog-title data-test="5f5ab2ab-a6f1-47f9-b05f-629c356e35db">
+    Spot #{{ spotViewModel.sequenceNumber }}
+  </h1>
+  <!--  <div mat-dialog-content *ngIf="spotDomain$ | async as spotDomain">-->
+  <!--    <app-photos [spotDomain]="spotDomain"></app-photos>-->
+  <!--  </div>-->
+  <!--  <div mat-dialog-content *ngIf="spotDomain$ | async as spotDomain">-->
+  <!--    <app-description [spotDomain]="spotDomain"></app-description>-->
+  <!--  </div>-->
+  <div mat-dialog-actions>
+    <button
+      mat-button
+      cdkFocusInitial
+      data-test="392864b3-db5e-46a0-b7d1-688e30e3fd3d"
+      (click)="close()">
+      Close
+    </button>
+  </div>
+</ng-container>

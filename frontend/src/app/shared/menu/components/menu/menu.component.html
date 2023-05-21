@@ -1,0 +1,4 @@
+<ng-container *ngFor="let item of menu.items">
+  <app-menu-item *ngIf="isItemsTypeButtons" [item]="item"></app-menu-item>
+  <app-list-item *ngIf="isItemsTypeList" [item]="item"></app-list-item>
+</ng-container>

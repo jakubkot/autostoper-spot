@@ -1,0 +1,30 @@
+<mat-form-field>
+  <textarea
+    matInput
+    cdkTextareaAutosize
+    #autosize="cdkTextareaAutosize"
+    cdkAutosizeMinRows="5"
+    cdkAutosizeMaxRows="10"
+    [(ngModel)]="value">
+  </textarea>
+</mat-form-field>
+
+<div class="action-button-row">
+  <button
+    mat-raised-button
+    color="primary"
+    aria-label="CANCEL description"
+    data-test="d40bcc83-1140-4a50-b197-9434f995d3ef"
+    (click)="cancel()">
+    Cancel
+  </button>
+
+  <button
+    mat-raised-button
+    color="primary"
+    aria-label="Save description"
+    data-test="d2164457-df86-4cec-8985-4811d8078aae"
+    (click)="save()">
+    Save
+  </button>
+</div>

@@ -1,0 +1,16 @@
+export enum Titles {
+  MAP = 'Map',
+  SETTINGS = 'Settings',
+  CONTACT = 'Contact',
+  REGISTER = 'Register',
+  CHANGE_DETECTOR = 'Change Detector',
+  STYLES = 'Styles',
+  HIGHER_ORDER_MAPPING = 'Higher Order Mapping',
+  FORK_JOIN = 'Fork Join',
+  COMBINE_LATEST = 'Combine Latest',
+  NG_ZONE = 'NgZone',
+  WORKER = 'Worker',
+  LIFECYCLE_HOOKS = 'Lifecycle Hooks',
+  CUSTOM_TEMPLATE_LIST = 'Custom template list',
+  NOT_FOUND = 'Not found',
+}

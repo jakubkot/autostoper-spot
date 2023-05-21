@@ -1,0 +1,18 @@
+<ng-container *ngIf="!item.items; else nestedItems">
+  <button mat-menu-item [routerLink]="item.routerLink">
+    <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
+    <span>{{ item.label }}</span>
+  </button>
+</ng-container>
+
+<ng-template #nestedItems>
+  <button mat-menu-item color="primary" [matMenuTriggerFor]="childMenu">
+    <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
+    <span>{{ item.label }}</span>
+  </button>
+  <mat-menu #childMenu="matMenu" [overlapTrigger]="false">
+    <app-menu-item
+      *ngFor="let item of item.items"
+      [item]="item"></app-menu-item>
+  </mat-menu>
+</ng-template>

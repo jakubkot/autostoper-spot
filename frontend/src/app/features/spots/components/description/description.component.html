@@ -1,0 +1,25 @@
+<h3>
+  Description
+  <button
+    [class.hidden]="!descriptionView.showEditButton"
+    mat-mini-fab
+    color="primary"
+    aria-label="Edit description"
+    data-test="b4d45a66-04d2-484f-a172-dcda8d94f1c7"
+    (click)="triggerEditing(true)">
+    <mat-icon>edit</mat-icon>
+  </button>
+</h3>
+<p
+  *ngIf="descriptionView.showDescriptionText"
+  data-test="01c2d002-a19c-4d96-94d2-2857d0a92093">
+  {{ spotDomain.description }}
+</p>
+<div
+  *ngIf="descriptionView.showDescriptionFormField"
+  data-test="b599b195-d467-44fd-b5e9-2a318d251d8c">
+  <app-description-field
+    [value]="spotDomain.description ?? null"
+    (saveEvent)="handleSaveEvent($event)"
+    (cancelEvent)="handleCancelEvent()"></app-description-field>
+</div>

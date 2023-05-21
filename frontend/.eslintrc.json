@@ -1,0 +1,221 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "parser": "@typescript-eslint/parser",
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "plugins": [
+        "rxjs",
+        "rxjs-angular"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:rxjs/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/use-lifecycle-interface": "error",
+        "@typescript-eslint/explicit-function-return-type": [
+          "error"
+        ],
+        "@typescript-eslint/explicit-member-accessibility": [
+          "warn"
+        ],
+        "@typescript-eslint/member-ordering": [
+          "error",
+          {
+            "default": [
+              // Index signature
+              "signature",
+
+              // Fields
+              "public-static-field",
+              "protected-static-field",
+              "private-static-field",
+              "#private-static-field",
+
+              "public-decorated-field",
+              "protected-decorated-field",
+              "private-decorated-field",
+
+              "public-instance-field",
+              "protected-instance-field",
+              "private-instance-field",
+              "#private-instance-field",
+
+              "public-abstract-field",
+              "protected-abstract-field",
+
+              "public-field",
+              "protected-field",
+              "private-field",
+              "#private-field",
+
+              "static-field",
+              "instance-field",
+              "abstract-field",
+
+              "decorated-field",
+
+              "field",
+
+              // Static initialization
+              "static-initialization",
+
+              // Constructors
+              "public-constructor",
+              "protected-constructor",
+              "private-constructor",
+
+              // Getters
+              "public-static-get",
+              "protected-static-get",
+              "private-static-get",
+              "#private-static-get",
+
+              "public-decorated-get",
+              "protected-decorated-get",
+              "private-decorated-get",
+
+              "public-instance-get",
+              "protected-instance-get",
+              "private-instance-get",
+              "#private-instance-get",
+
+              "public-abstract-get",
+              "protected-abstract-get",
+
+              "public-get",
+              "protected-get",
+              "private-get",
+              "#private-get",
+
+              "static-get",
+              "instance-get",
+              "abstract-get",
+
+              "decorated-get",
+
+              "get",
+
+              // Setters
+              "public-static-set",
+              "protected-static-set",
+              "private-static-set",
+              "#private-static-set",
+
+              "public-decorated-set",
+              "protected-decorated-set",
+              "private-decorated-set",
+
+              "public-instance-set",
+              "protected-instance-set",
+              "private-instance-set",
+              "#private-instance-set",
+
+              "public-abstract-set",
+              "protected-abstract-set",
+
+              "public-set",
+              "protected-set",
+              "private-set",
+
+              "static-set",
+              "instance-set",
+              "abstract-set",
+
+              "decorated-set",
+
+              "set",
+
+              // Methods
+              "public-static-method",
+              "protected-static-method",
+              "private-static-method",
+              "#private-static-method",
+              "public-decorated-method",
+              "protected-decorated-method",
+              "private-decorated-method",
+              "public-instance-method",
+              "protected-instance-method",
+              "private-instance-method",
+              "#private-instance-method",
+              "public-abstract-method",
+              "protected-abstract-method"
+            ]
+          }
+        ],
+        "comma-dangle": [
+          "warn",
+          "always-multiline"
+        ],
+        "semi": "error",
+        "rxjs/no-unsafe-takeuntil": [
+          "error",
+          {
+            "alias": [
+              "untilDestroyed"
+            ]
+          }
+        ],
+        "rxjs/no-implicit-any-catch": [
+          "off"
+        ],
+        "rxjs-angular/prefer-async-pipe": [
+          "off"
+        ],
+        "rxjs-angular/prefer-composition": [
+          "off"
+        ],
+        "rxjs-angular/prefer-takeuntil": [
+          "off"
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "plugin:@ngrx/recommended"
+      ]
+    }
+  ]
+}

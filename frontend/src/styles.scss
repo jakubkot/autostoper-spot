@@ -1,0 +1,40 @@
+@forward 'app/styles/styles';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.action-button-row {
+  display: table-cell;
+  max-width: 600px;
+
+  .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.map-button-container {
+  position: absolute;
+  z-index: 2;
+}
+
+.top-left {
+  top: 1em;
+  left: 1em;
+}
+
+.top-right {
+  top: 1em;
+  right: 1em;
+}

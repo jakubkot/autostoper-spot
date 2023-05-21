@@ -1,0 +1,58 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@env": [
+        "src/environments/environment"
+      ],
+      "@api/*": [
+        "src/app/api/*"
+      ],
+      "@core/*": [
+        "src/app/core/*"
+      ],
+      "@features/*": [
+        "src/app/features/*"
+      ],
+      "@domains/*": [
+        "src/app/domains/*"
+      ],
+      "@pages/*": [
+        "src/app/pages/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
+      "@utils/*": [
+        "src/app/utils/*"
+      ]
+    },
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "es2020",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

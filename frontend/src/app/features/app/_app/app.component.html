@@ -1,0 +1,35 @@
+<!--<div class="map-button-container">-->
+<!--  <button-->
+<!--    *ngIf="!sidenav.opened && (opened$ | async) === null"-->
+<!--    mat-fab-->
+<!--    class="top-left"-->
+<!--    color="primary"-->
+<!--    aria-label="Example icon button with a delete icon"-->
+<!--    (click)="sidenav.open()">-->
+<!--    <mat-icon>menu</mat-icon>-->
+<!--  </button>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;@todo zrobić serwis który będzie odpowiedzialny za nawigację z menu&ndash;&gt;-->
+<!--<mat-sidenav-container class="navigation-sidenav-container">-->
+<!--  <mat-sidenav #sidenav position="start" [opened]="false">-->
+<!--    <mat-nav-list>-->
+<!--      <app-menu [menu]="sidebarMenu"></app-menu>-->
+<!--    </mat-nav-list>-->
+<!--  </mat-sidenav>-->
+<!--  <mat-sidenav-->
+<!--    #sidenav2-->
+<!--    position="end"-->
+<!--    style="width: 100%"-->
+<!--    [opened]="opened$ | async">-->
+<!--    <button mat-icon-button (click)="close(sidenav2)">-->
+<!--      <mat-icon>arrow_back</mat-icon>-->
+<!--    </button>-->
+<!--    <router-outlet></router-outlet>-->
+<!--  </mat-sidenav>-->
+
+<!--  <mat-sidenav-content>-->
+<!--    <app-map-page></app-map-page>-->
+<!--  </mat-sidenav-content>-->
+<!--</mat-sidenav-container>-->
+<app-map-page></app-map-page>

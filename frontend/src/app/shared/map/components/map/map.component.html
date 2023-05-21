@@ -1,0 +1,8 @@
+<div
+  *ngIf="center$ | async as center"
+  leaflet
+  appInitialResize
+  [leafletOptions]="options"
+  [leafletCenter]="center"
+  [leafletLayers]="markers"
+  [leafletMarkerCluster]="markerCluster"></div>
