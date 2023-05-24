@@ -11,36 +11,36 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
 
 const routes: Routes = [
   {
-    // path: '',
-    // component: AppComponent,
-    // // resolve: {
-    // //   [ResolverKeys.SPOTS]: SpotsResolver,
-    // // },
-    // children: [
-    //   {
     path: '',
-    loadChildren: () =>
-      loadRemoteModule({
-        type: 'manifest',
-        remoteName: 'user',
-        exposedModule: './LayoutModule',
-      }).then((m) => m.LayoutModule),
-    //   },
-    // ],
+    component: AppComponent,
+    resolve: {
+      [ResolverKeys.SPOTS]: SpotsResolver,
+    },
     // children: [
     //   {
-    //     path: `${RoutingPathFragments.SPOTS}/:${RoutingParams.ID}`,
-    //     component: SpotDetailPageComponent,
-    //   },
-    //   {
-    //     path: RoutingPathFragments.NOT_FOUND,
-    //     title: Titles.NOT_FOUND,
-    //     loadChildren: () =>
-    //       import('@core/pages/not-found-page/not-found-page.module').then(
-    //         (m) => m.NotFoundPageModule,
-    //       ),
+    // path: '',
+    // loadChildren: () =>
+    //   loadRemoteModule({
+    //     type: 'manifest',
+    //     remoteName: 'user',
+    //     exposedModule: './LayoutModule',
+    //   }).then((m) => m.LayoutModule),
     //   },
     // ],
+    children: [
+      {
+        path: `${RoutingPathFragments.SPOTS}/:${RoutingParams.ID}`,
+        component: SpotDetailPageComponent,
+      },
+      {
+        path: RoutingPathFragments.NOT_FOUND,
+        title: Titles.NOT_FOUND,
+        loadChildren: () =>
+          import('@core/pages/not-found-page/not-found-page.module').then(
+            (m) => m.NotFoundPageModule,
+          ),
+      },
+    ],
   },
 ];
 

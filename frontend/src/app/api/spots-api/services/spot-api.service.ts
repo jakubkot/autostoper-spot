@@ -3,10 +3,10 @@ import { SpotApi } from '@api/spots-api/interfaces/spot-api.interface';
 import { SpotResponse } from '@api/spots-api/interfaces/responses/spot.response';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { apiSpots } from '../../../../environments/environment.dev';
 import { ApiParams } from '@api/consts/api-params.const';
 import { SpotMarkerResponse } from '@api/spots-api/interfaces/responses/spot-marker.response';
 import { SpotDomainModel } from '@domains/spot/models/spot.domain.model';
+import { apiSpots } from "../../../../environments/environment";
 
 @Injectable({
   providedIn: 'root',

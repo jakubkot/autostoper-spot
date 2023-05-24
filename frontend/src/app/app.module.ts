@@ -10,8 +10,7 @@ import { environment } from '@env';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { AppComponent } from '@features/app/app.component';
-import { MapPageModule } from '@features/spots/pages/map-page/map-page.module';
-import { WebComponentWrapperComponent } from '@features/web-component-wrapper/web-component-wrapper.component';
+import { MapPageModule } from "@features/spots/pages/map-page/map-page.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -47,7 +46,7 @@ import { WebComponentWrapperComponent } from '@features/web-component-wrapper/we
       maxAge: 25,
       logOnly: environment.production,
     }),
-    WebComponentWrapperComponent,
+    MapPageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
